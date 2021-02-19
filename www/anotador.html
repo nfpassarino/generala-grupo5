@@ -1,0 +1,118 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="anotador">
+
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <!-- <div class="left"><i class="icon icon-back"></i></div> -->
+            <div class="title">Anotador de Generala</div>
+            <!--<div class="right"><i class="icon icon-forward"></i></div> -->
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="#" class="link" id="btnVolver">Volver</a>
+            <a href="#" class="link" id="btnReiniciar">Reiniciar Puntos</a>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="row block">
+            <!-- Columna categorías -->
+            <div class="col">
+                <a class="col button button-fill text-align-center"> Categoria </a>
+                <a class="col button button-fill text-align-center"> 1 </a>
+                <a class="col button button-fill text-align-center"> 2 </a>
+                <a class="col button button-fill text-align-center"> 3 </a>
+                <a class="col button button-fill text-align-center"> 4 </a>
+                <a class="col button button-fill text-align-center"> 5 </a>
+                <a class="col button button-fill text-align-center"> 6 </a>
+                <a class="col button button-fill text-align-center"> Doble </a>
+                <a class="col button button-fill text-align-center"> Escalera </a>
+                <a class="col button button-fill text-align-center"> Full </a>
+                <a class="col button button-fill text-align-center"> Poker </a>
+                <a class="col button button-fill text-align-center"> Generala </a>
+            </div>
+            <!-- Columna Jugador 1 -->
+            <div class="col">
+                <a class="col button button-fill text-align-center" id="nombreJ1"></a>
+                <!-- Categorías del 1 al 6 -->
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_1">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_2">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_3">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_4">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_5">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j1_6">-</button>
+                <!-- Juegos -->
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j1_7">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j1_8">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j1_9">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j1_10">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j1_11">-</button>
+            </div>
+            <!-- Columna Jugador 2 -->
+            <div class="col">
+                <a class="col button button-fill text-align-center" id="nombreJ2"></a>
+                <!-- Categorías del 1 al 6 -->
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_1">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_2">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_3">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_4">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_5">-</button>
+                <button class="col button button-fill text-align-center popover-open dados" href="#" data-popover=".popover-puntaje" id="j2_6">-</button>
+                <!-- Juegos -->
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j2_7">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j2_8">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j2_9">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j2_10">-</button>
+                <button class="col button button-fill text-align-center popover-open" href="#" data-popover=".popover-juegos" id="j2_11">-</button>
+            </div>
+        </div>
+
+        <div class="row block">
+            <div class="col">
+                <button class="col button button-fill text-align-center">Puntaje</button>
+            </div>
+            <div class="col">
+                <button class="col button button-fill text-align-center" id="puntajeJ1"> 0 </button>
+            </div>
+            <div class="col">
+                <button class="col button button-fill text-align-center" id="puntajeJ2"> 0 </button>
+            </div>
+        </div>
+    </div>
+    <div class="popover popover-puntaje">
+        <div class="popover-inner">
+            <div class="block">
+                <p>Cantidad de dados:</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a class="list-button item-link popover-close" id="l1" href="#"></a></li>
+                    <li><a class="list-button item-link popover-close" id="l2" href="#"></a></li>
+                    <li><a class="list-button item-link popover-close" id="l3" href="#"></a></li>
+                    <li><a class="list-button item-link popover-close" id="l4" href="#"></a></li>
+                    <li><a class="list-button item-link popover-close" id="l5" href="#"></a></li>
+                    <li><a class="list-button item-link text-color-red popover-close tachar" href="#">Tachar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="popover popover-juegos">
+        <div class="popover-inner">
+            <div class="block">
+                <p>Jugada:</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a class="list-button item-link popover-close" id="servida" href="#">Servida</a></li>
+                    <li><a class="list-button item-link popover-close" id="nservida" href="#">No Servida</a></li>
+                    <li><a class="list-button item-link text-color-red popover-close tachar" href="#">Tachar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
