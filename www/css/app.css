@@ -136,6 +136,10 @@
   --f7-navbar-large-title-text-color: #fff;
 }
 
+.tachar {
+  font-weight: bold;
+}
+
 .popover-close:hover {
   background-color: #673ab7;
   color: #ffffff;
@@ -144,8 +148,5 @@
 .tachar:hover {
   background-color: #ff0000;
   color: #ffffff;
-}
-
-.tachar {
-  color: #ff0000;
+  font-weight: bold;
 }
