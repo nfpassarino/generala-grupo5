@@ -13,21 +13,9 @@ var app = new Framework7({
   });
 
 var mainView = app.views.create('.view-main');
-var j1nombre = '';
-var j2nombre = '';
-var idjugada = '';
-var puntajejugadas = [0,1,2,3,4,5,6,10,20,30,40,50]; //j1_7 j1_8
+var j1nombre = '', j2nombre = '', idjugada = '';
 
-$$(document).on('deviceready', function() {
-    console.log("Device is ready!");
-});
-
-$$(document).on('page:init', function (e) {
-    console.log(e);
-})
-
-
-//Página index
+//Página index--------------------------------------------------------------------------
 $$(document).on('page:init', '.page[data-name="index"]', function (e) {
   //si hacemos click en comenzar, guarda los nombres en variables gloabales y nos lleva al anotador
   $$('#btnComenzar').on('click', function() {
@@ -37,7 +25,7 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
   });
 })
 
-//Página anotador
+//Página anotador-----------------------------------------------------------------------
 $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   //mostramos los nombres de los jugadores
   $$('#nombreJ1').text(j1nombre);
@@ -57,6 +45,7 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   $$('#btnReiniciar').on('click', reiniciarPuntos);
 })
 
+//Funciones-----------------------------------------------------------------------------
 function capturarId() {
   //guardamos el id del boton que se hizo click (por ej j1_10)
   idjugada = this.id;
@@ -83,7 +72,6 @@ function mostrarPuntajeDado() {
 }
 //cuando hago click con id nservida, me tiene que mostrar el puntaje de esa jugada no servida
 function mostrarPuntajeNoServida() {
-  //$$('#' + idjugada).text(puntajejugadas[idjugada.split('_')[1]]);
   switch (idjugada) {
     case 'j1_7':
     case 'j2_7':
@@ -110,7 +98,6 @@ function mostrarPuntajeNoServida() {
 }
 //cuando hago click link con id servida, me tiene que mostrar el puntaje de esa jugada servida
 function mostrarPuntajeServida() {
-  //$$('#' + idjugada).text(puntajejugadas[idjugada.split('_')[1]] + 5);
   switch (idjugada) {
     case 'j1_7':
     case 'j2_7':
@@ -149,7 +136,6 @@ function actualizarTotal() {
     }
   }
   $$('#puntaje' + jugador).text(total);
-  //mostraba ('#puntaje' + jugador) muestre total
 }
 
 function reiniciarPuntos() {
